@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Huy's Food Store</title>
+  
+  <!--/* Flexbox header and nav */-->
+ <style>
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background-color: white;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header ,nav {
+        display: flex;
+    }
+    header {
+        justify-content: space-between;
+        align-items: center;
+        background-color: #111;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+    nav {
+        align-items: center;
+    }
+    nav a {
+        display: inline-block;
+        padding: 10px;
+        margin: 0px 10px;
+        text-decoration: none;
+        color: #ddd;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        border-bottom: 2px solid transparent;       
+    }
+    nav a:hover {
+        color: #fff;
+        border-bottom: 2px solid #00bcd4;
+    }
+    main {
+        padding: 20px;
+    }
+    footer {
+        background-color: #111;
+        color: #ccc;
+        padding: 20px;
+        font-size: 0.9em;
+        border-top: 1px solid #333;
+    }
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 20px;
+        border: 1px solid #333;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background-color: white;
+    }
+    .project-card a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease; transform: 0.2s ease;
+    }
+    .project-card a :hover{
+        color: #00bcd4;
+        text-decoration: underline;
+        transform: scale(1.05);
+    }
+    .project-card img {
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3 ease;
+    }
+    .project-card img:hover{
+        transform: scale(1.03);
+    }
+    .project-card h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .project-card p {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 900px) {
+        .projects {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        nav {
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 600px) {
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+
+ </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="Logo.png" alt="Huy's Food Store Logo" style="height: 500px;  margin: 20px;">
+            <h1>Huy's Food Store</h1>
+            <p>Welcome and Enjoy grabbing your own's favorite choices of food at our store!</p>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="noodle.html">Noodles</a>
+            <a href="drinks.html">Drinks</a>
+            <a href="snacks.html">Snacks</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main class="projects">
+      <div class="project-card">      
+        <img src="Noodles.jpg" alt="Noodles">
+        <h2><a href="noodles.html">Noodles</a></h2>        
+        <p>Explore a variety of delicious noodles at great prices.</p>       
+      </div>
+
+      <div class="project-card">
+        <img src="drinks.jpg" alt="Drinks">
+        <h2><a href="drinks.html">Drinks</a></h2>       
+        <p>Explore a variety of delicious drinks at great prices.</p>
+      </div>
+      <div class="project-card">
+        <img src="snacks.jpg" alt="Snacks"/>
+        <h2><a href="snacks.html">Snacks</a></h2>
+        <p>Explore a variety of delicious snacks at great prices.</p>
+      </div>
+
+    </main>
+
+    <footer>
+  <p>© 2025 Huy's Food Store</p>
+</footer>
+
+</body>
+</html>
