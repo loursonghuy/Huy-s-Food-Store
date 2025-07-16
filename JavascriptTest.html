@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>What can JavaScript Do?</h2>
+        <p>JavaScript can change HTML attribute values.</p>
+        <p>In this case, it changes the source (src) attribute of an image.</p>
+        
+        <button onclick="turnOn()">Turn on the Light</button>
+        
+        <img id="myImage" src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg" 
+             alt="Light bulb" style="width: 100px;">
+        
+        <button onclick="turnOff()">Turn off the Light</button>
+    </div>
+
+    <script>
+        function turnOn() {
+            document.getElementById('myImage').src = 
+                'https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg';
+        }
+        
+        function turnOff() {
+            document.getElementById('myImage').src = 
+                'https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg';
+        }
+    </script>
+</body>
+</html>
